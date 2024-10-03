@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #e9b59f;
+}
+
+.anticipation {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    .box {
+        background-color: #2d97db;
+        width: 4rem;
+        aspect-ratio: 1;
+        border: 1rem solid white;
+        position: absolute;
+        top: calc(50% - 2rem);
+        left: calc(50% - 2rem);
+        animation: anticipation 3s infinite ease-out;
+        transform-origin: center 7rem;
+    }
+
+    .shelf {
+        width: 8rem;
+        height: 1rem;
+        background-color: black;
+        position: absolute;
+        top: calc(50% + 4rem);
+        left: calc(50% - 3rem);
+    }
+}
+
+@keyframes anticipation {
+    0%, 15% {
+        opacity: 0;
+        transform: none;
+    }
+    15%, 25% {
+        opacity: 1;
+        transform: none;
+    }
+    25%, 38% {
+        transform: translateX(-2rem);
+    }
+    40%, 45% {
+        transform: translateX(-4rem);
+    }
+    50%, 52% {
+        transform: translateX(-4rem) rotate(-20deg);
+    }
+    70%, 75% {
+        transform: translateX(-4rem) rotate(-10deg);
+    }
+    78%, 80% {
+        transform: translateX(-4rem) rotate(-25deg);
+        opacity: 1;
+    }
+    86%, 100% {
+        transform: translateX(-8rem) translateY(8rem) rotate(-90deg);
+        opacity: 0;
+    }
+}
